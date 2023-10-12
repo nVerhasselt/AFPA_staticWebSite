@@ -1,0 +1,240 @@
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+/*Question 2*/
+
+/*NAVBAR couleur de fond parmi celles disponibles dans la charte graphique :*/
+nav {
+    background: #78be20;
+    min-width: 100%;
+}
+
+/*Nous modifierons enfin les éléments de la liste afin d'obtenir une bordure de séparation blanche à droite (sauf sur le dernier élément de la liste (voir sélecteur last-child)*/
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+nav > ul > li { 
+    border-right: 1px solid white;
+   
+}
+
+/*selecteur :last-child*/
+li:last-child {
+    border: none;
+    
+}
+
+nav > ul > li > a {
+    display: flex; 
+    text-decoration: none;
+    padding: 1em;
+    background: #87BB34;
+}
+
+/*Question 3*/ 
+
+header > img {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+/*Question 4*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: grey;
+    opacity: 0.8;
+    border-radius: 10px;
+    width: 60%;
+    padding-bottom: 20px;
+
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 1003px;
+    background-image: url('../Images/A2-1920.jpg');
+    align-items: center;
+    
+}
+
+h1, h2 {
+    color: white;
+    text-align: center;
+    background-color: #44A33D;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1 {
+    width: 60%;
+}
+
+h2 { 
+    width: 50%;
+}
+
+
+
+
+main a {
+    text-align: center;
+    background: red;
+    border-radius: 10px;
+    width: 50%;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin-top: 3rem;
+}
+
+/*Question 5*/
+
+/*Page Formation*/
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+}
+
+.colFormation {
+    display: flex;
+    flex-direction: column;
+    background: grey;
+    opacity: 0.8;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 45%;
+    
+}
+
+.rubriqueFormation {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #f25482;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.rubriqueFormation-Titre {
+    align-self: center;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    background-color: #44A33D;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/*Question 6*/
+/*Page témoignages*/
+
+.temoignages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+
+}
+
+.carte-temoignage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #7a99ac;
+    opacity: 0.8;
+    min-width: 300px;
+    width: 30%;
+
+}
+
+ div > img {
+    width : 10rem;
+    height : 10rem;
+}
+
+/*Question 7*/
+/*Page Nos références*/
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Question 8*/
+form{
+    background: #7a99ac;
+    opacity: 0.8;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    height: 100rem;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 996px) {
+
+    header > img {
+        display: none;
+
+    }
+    header { 
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style-type: none; 
+        justify-content: center;  
+    }
+
+    h1 {
+        width: 60%;
+    }
+    
+    .secondary {
+        display: none;
+        
+    }
+
+    main {
+        min-height: fit-content;
+        max-height: 100%;
+        background: #2f1f47;
+    }
+
+    .colFormation {
+        width: 90%;
+    }
+
+    .carte-temoignage {
+        width: 100%;
+        margin: 1rem;
+        
+    }
+
+}
